@@ -49,7 +49,7 @@ function Footer() {
                 </div>
 
           </div>
-          <div className='bg-white dark:bg-slate-800 text-black dark:text-white lg:px-48 px-4 py-2 border-t border-slate-800'>
+          <div className='bg-white dark:bg-slate-800 text-black dark:text-white lg:px-48 px-4 py-2  border-slate-800'>
             <h2 className='text-bass text-center font-semibold text-teal-500'>Copyright © 2024. All rights are reserved by Tarun.</h2>
           </div>
         </footer>
