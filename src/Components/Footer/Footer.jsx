@@ -12,45 +12,65 @@ function Footer() {
     const social = [
       {
         link: 'https://www.linkedin.com/in/tarun-kumar-sarker-133271220/',
-        icon: <FaLinkedinIn/>,
+        icon: <FaLinkedinIn className='hover:text-teal-500'/>,
+        
       },
       {
         link: 'https://github.com/sarkertarun',
-        icon: <AiFillGithub/>,
+        icon: <AiFillGithub className='hover:text-teal-500'/>,
       },
       {
         link: 'http://wa.me/+8801673089909',
-        icon: <FaWhatsapp/>,
+        icon: <FaWhatsapp className='hover:text-teal-500'/>,
       },
 
       ]
       
     return (
-        <footer >
-          <div className='md:flex md:px-10 lg:flex bg-white dark:bg-slate-800 text-black dark:text-white lg:px-48 px-4 justify-center border-t border-slate-800'>
-                <div  className='md:flex lg:flex gap-10 '>
-                    <div>
-                        <h2 className='text-[22px] font-semibold text-teal-500 py-2  uppercase'>Contact</h2>
-                        <a href="mailto:tarun.reactdev@gmail.com" className='text-[16px]  hover:text-teal-500 transition-all duration-150 ease-in-out cursor-pointer'>Email: tarun.reactdev@gmail.com</a>
-                        <p className='text-[16px] hover:text-teal-500 transition-all duration-150 ease-in-out'>Phone: +8801673-089909</p>
-                    </div>
-                    <div>
-                        <h2 className='text-[22px] font-semibold text-teal-500 py-2 uppercase'>Follow Me</h2>
-                        <div className='flex space-x-4'>
-                            {social.map((social, index) => (
-                                <a key={index} target="_blank" href={social.link} className=' hover:text-teal-500 transition-all duration-150 ease-in-out'>
-                                <div  className='text-[28px]'>
-                                    {social.icon}
-                                </div>                    
-                            </a>
-                            ))}
-                        </div>
-                    </div>
+        <footer className="bg-white dark:bg-slate-800 border-slate-800">
+          <div className="max-w-6xl mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-teal-500 uppercase">Contact</h2>
+                <div className="space-y-3">
+                  <a 
+                    href="mailto:tarun.reactdev@gmail.com" 
+                    className="flex items-center text-gray-600 dark:text-gray-300 hover:text-teal-500 transition duration-300"
+                  >
+                    <span className="text-lg hover:text-teal-500">Email: tarun.reactdev@gmail.com</span>
+                  </a>
+                  <p className="flex items-center text-gray-600 dark:text-gray-300">
+                    <span className="text-lg hover:text-teal-500">Phone: +8801673-089909</span>
+                  </p>
                 </div>
-
+              </div>
+              
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-teal-500 uppercase">Follow Me</h2>
+                <div className="flex space-x-6">
+                  {social.map((social, index) => (
+                    <a 
+                      key={index}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="text-3xl text-gray-600 dark:text-gray-300"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='bg-white dark:bg-slate-800 text-black dark:text-white lg:px-48 px-4 py-2  border-slate-800'>
-            <h2 className='text-bass text-center font-semibold text-teal-500'>Copyright © 2024. All rights are reserved by Tarun.</h2>
+
+          <div className="border-t border-gray-200 dark:border-gray-700">
+            <div className="max-w-6xl mx-auto px-4 py-6">
+              <p className="text-center text-gray-600 dark:text-gray-300">
+                Copyright © {new Date().getFullYear()}. All rights are reserved by 
+                <span className="text-teal-500 font-semibold"> Tarun</span>.
+              </p>
+            </div>
           </div>
         </footer>
     )
