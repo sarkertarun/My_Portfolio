@@ -5,6 +5,7 @@ import img4 from '../assets/portfolio.png'
 import img5 from '../assets/pacific.png'
 import img6 from '../assets/city.png'
 import img7 from '../assets/resturant.png'
+import img8 from '../assets/textile.png'
 
 
 const ProjectsList = [
@@ -58,6 +59,12 @@ const ProjectsList = [
         link: 'https://gourmet-gril-team.vercel.app/',
         github: 'https://github.com/vision13141/Gourmet-Gril-Team',
         image: img7
+    },
+    {
+        id: 8,
+        title: 'thetextilenetwork (Team Project)',
+        link: 'https://thetextilenetwork.com/',
+        image: img8
     },
 
     
